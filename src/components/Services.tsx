@@ -36,13 +36,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-20 bg-white/10 backdrop-blur-sm">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
             Nuestros Servicios
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
             Todo lo que tu mascota necesita en un solo lugar
           </p>
         </div>
@@ -51,20 +51,20 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 bg-card/80 backdrop-blur"
+              className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-2 border-2 border-white/30 hover:border-primary bg-white/95 backdrop-blur"
             >
               <CardContent className="p-8 text-center">
                 <div className="mb-4 flex justify-center">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-rainbow rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
                     <div className="relative bg-primary/10 p-4 rounded-full group-hover:bg-primary/20 transition-colors">
                       <service.icon className="w-8 h-8 text-primary" />
                     </div>
                   </div>
                 </div>
                 <div className="text-4xl mb-3">{service.emoji}</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-card-foreground">{service.title}</h3>
+                <p className="text-card-foreground/70">{service.description}</p>
               </CardContent>
             </Card>
           ))}

@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 20%;
+    --background: 195 100% 58%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 20% 20%;
@@ -17,33 +17,34 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 20%;
 
-    --primary: 195 100% 42%;
+    --primary: 262 71% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 71% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 45 92% 85%;
+    --secondary-foreground: 220 20% 20%;
 
-    --muted: 195 20% 96%;
-    --muted-foreground: 220 15% 50%;
+    --muted: 195 80% 70%;
+    --muted-foreground: 0 0% 100%;
 
-    --accent: 45 100% 51%;
-    --accent-foreground: 220 20% 20%;
+    --accent: 340 82% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 195 20% 90%;
-    --input: 195 20% 90%;
-    --ring: 195 100% 42%;
+    --border: 195 60% 75%;
+    --input: 0 0% 100%;
+    --ring: 262 71% 55%;
 
     --radius: 1rem;
     
     --gradient-rainbow: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 25%, #6BCF7F 50%, #4ECDC4 75%, #A78BFA 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 42%), hsl(195 100% 55%));
-    --paw-pattern: radial-gradient(circle at 20% 50%, hsl(195 100% 42% / 0.05) 0%, transparent 50%);
+    --gradient-primary: linear-gradient(135deg, hsl(262 71% 55%), hsl(262 71% 65%));
+    --gradient-sky: linear-gradient(180deg, hsl(195 100% 58%), hsl(195 100% 65%));
+    --paw-shadow: 0 0 30px hsl(195 80% 70% / 0.3);
     
-    --shadow-glow: 0 10px 40px hsl(195 100% 42% / 0.2);
-    --shadow-card: 0 4px 20px hsl(195 20% 50% / 0.1);
+    --shadow-glow: 0 10px 40px hsl(262 71% 55% / 0.3);
+    --shadow-card: 0 8px 30px hsl(220 20% 20% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -109,5 +110,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 10% 20%, hsl(195 80% 70% / 0.3) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, hsl(195 80% 70% / 0.3) 0%, transparent 20%),
+      radial-gradient(circle at 50% 50%, hsl(195 80% 70% / 0.2) 0%, transparent 30%);
+  }
+  
+  .paw-print {
+    color: hsl(195 80% 70% / 0.4);
   }
 }

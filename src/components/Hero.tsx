@@ -7,14 +7,14 @@ const Hero = () => {
   const whatsappMessage = "Hola! Me gustaría conocer más sobre sus servicios 🐾";
   
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Decorative paw prints */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 text-6xl">🐾</div>
-        <div className="absolute top-40 right-20 text-5xl">🐾</div>
-        <div className="absolute bottom-32 left-1/4 text-7xl">🐾</div>
-        <div className="absolute bottom-20 right-1/3 text-6xl">🐾</div>
-        <div className="absolute top-1/3 right-10 text-5xl">🐾</div>
+      <div className="absolute inset-0 paw-print">
+        <div className="absolute top-20 left-10 text-6xl animate-pulse" style={{ animationDelay: '0s' }}>🐾</div>
+        <div className="absolute top-40 right-20 text-5xl animate-pulse" style={{ animationDelay: '1s' }}>🐾</div>
+        <div className="absolute bottom-32 left-1/4 text-7xl animate-pulse" style={{ animationDelay: '2s' }}>🐾</div>
+        <div className="absolute bottom-20 right-1/3 text-6xl animate-pulse" style={{ animationDelay: '0.5s' }}>🐾</div>
+        <div className="absolute top-1/3 right-10 text-5xl animate-pulse" style={{ animationDelay: '1.5s' }}>🐾</div>
       </div>
 
       <div className="container px-4 py-16 mx-auto relative z-10">
@@ -29,19 +29,19 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
             Todo para tu Peludo Amigo
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300">
-            En <span className="font-semibold text-primary">Caprichos Pet Shop</span> encontrarás alimentos, accesorios, juguetes y todo lo que tu mascota necesita en Fusagasugá 🐶🐱
+          <p className="text-lg md:text-xl lg:text-2xl text-white/95 mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)]">
+            En <span className="font-bold text-secondary drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Caprichos Pet Shop</span> encontrarás alimentos, accesorios, juguetes y todo lo que tu mascota necesita en Fusagasugá 🐶🐱
           </p>
 
           {/* Location badge */}
-          <div className="flex items-center gap-2 mb-10 px-6 py-3 bg-card rounded-full shadow-card border border-border animate-in fade-in slide-in-from-bottom-7 duration-700 delay-500">
+          <div className="flex items-center gap-2 mb-10 px-6 py-3 bg-white/95 rounded-full shadow-card border-2 border-white animate-in fade-in slide-in-from-bottom-7 duration-700 delay-500">
             <MapPin className="w-5 h-5 text-primary" />
-            <span className="text-sm md:text-base font-medium">
+            <span className="text-sm md:text-base font-semibold text-card-foreground">
               Transversal 12 #22-42, Centro Comercial Manila - Fusagasugá
             </span>
           </div>
@@ -58,8 +58,9 @@ const Hero = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 hover:scale-105 transition-all border-2"
+              variant="secondary"
+              className="text-lg px-8 py-6 hover:scale-105 transition-all shadow-lg border-2 border-secondary"
+              onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Transversal+12+22-42+Centro+Comercial+Manila+Fusagasugá', '_blank')}
             >
               <MapPin className="mr-2 h-5 w-5" />
               Cómo Llegar
