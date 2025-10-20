@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
-import logoCaprichos from "@/assets/logo-caprichos-hq.jpg";
+import logoCaprichos from "@/assets/logo-caprichos-transparent.png";
 
 const Hero = () => {
   const whatsappNumber = "573222155558";
